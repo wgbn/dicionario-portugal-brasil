@@ -6,19 +6,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TermPage } from './term.page';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
-  { path: '', component: TermPage },
-  { path: ':id', component: TermPage },
+    { path: '', component: TermPage },
+    { path: ':id', component: TermPage },
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
-  ],
-  declarations: [TermPage]
+    imports: [
+        SharedModule,
+        RouterModule.forChild(routes)
+    ],
+    declarations: [TermPage]
 })
-export class TermPageModule {}
+export class TermPageModule { }

@@ -1,9 +1,26 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>term</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-layout [showNavigation]="false" class="term-page">
 
-<ion-content>
+    <div class="back">
+        <div class="block" (click)="location.back()">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </div>
+    </div>
 
-</ion-content>
+    <div class="content">
+
+        <ng-container *ngIf="verb$ | async as verb">
+
+            <ion-card>
+                <ion-card-header color="dark">
+                    <ion-card-title>{{verb.term}}</ion-card-title>
+                </ion-card-header>
+                <ion-img *ngIf="verb.imageUrl" [src]="verb.imageUrl"></ion-img>
+                <ion-card-content>{{verb.value}}</ion-card-content>
+                <ion-card-content class="primary" *ngIf="verb.description">{{verb.description}}</ion-card-content>
+            </ion-card>
+
+        </ng-container>
+
+    </div>
+
+</app-layout>

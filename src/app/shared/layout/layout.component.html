@@ -1,0 +1,26 @@
+<div class="layout">
+
+    <main class="main">
+        <ng-content></ng-content>
+    </main>
+
+    <div class="footer" *ngIf="showNavigation">
+		<ion-toolbar>
+			<ion-segment>
+				<ion-segment-button [ngClass]="{'active': active === 'home'}" routerLink="/home">
+					<ion-icon name="book"></ion-icon>
+                    <ion-label>Dicionário</ion-label>
+				</ion-segment-button>
+                <ion-segment-button [ngClass]="{'active': active === 'curiosity'}" routerLink="/curiosity">
+					<ion-icon name="wifi"></ion-icon>
+                    <ion-label>Curiosidades</ion-label>
+				</ion-segment-button>
+                <ion-segment-button [ngClass]="{'active': active === 'tips'}" routerLinl="/tips">
+					<ion-icon name="contract"></ion-icon>
+                    <ion-label>Dicas</ion-label>
+				</ion-segment-button>
+			</ion-segment>
+		</ion-toolbar>
+	</div>
+
+</div>

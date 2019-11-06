@@ -1,36 +1,20 @@
-<div class="home-page">
+<app-layout class="home-page">
 
 	<div class="search">
-		<ion-searchbar mode="ios" placeholder="buscar termo"></ion-searchbar>
+		<ion-searchbar #search (keyup)="filter(search.value)" mode="ios" placeholder="buscar termo"></ion-searchbar>
 	</div>
 
-	<main class="main">
+	<div class="content">
 
-        <ion-list>
-            <ion-item detail routerLink="/term/1">
-                <ion-label>Avocado</ion-label>
-            </ion-item>
-        </ion-list>
+		<ion-list>
 
-	</main>
+			<ion-item detail routerLink="/term/{{verb.id}}" *ngFor="let verb of dictionary">
+				<ion-label>{{verb.term}}</ion-label>
+			</ion-item>
 
-	<div class="footer">
-		<ion-tabs>
-			<!-- Tab bar -->
-			<ion-tab-bar slot="bottom" mode="ios">
-				<ion-tab-button routerLink="/home">
-					<ion-icon name="book"></ion-icon>
-                    <ion-label>Dicionário</ion-label>
-				</ion-tab-button>
-				<ion-tab-button tab="contact">
-					<ion-icon name="wifi"></ion-icon>
-                    <ion-label>Curiosidades</ion-label>
-				</ion-tab-button>
-				<ion-tab-button tab="settings">
-					<ion-icon name="contract"></ion-icon>
-                    <ion-label>Dicas</ion-label>
-				</ion-tab-button>
-			</ion-tab-bar>
-		</ion-tabs>
+		</ion-list>
+
 	</div>
-</div>
+
+
+</app-layout>
