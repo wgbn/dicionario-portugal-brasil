@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyDuCmoMNLzm3p0xiLHwA63FFYSq6sibFxc",
-    authDomain: "yes4develop.firebaseapp.com",
-    databaseURL: "https://yes4develop.firebaseio.com",
-    projectId: "yes4develop",
-    storageBucket: "yes4develop.appspot.com",
-    messagingSenderId: "822997869888",
-    appId: "1:822997869888:web:35b8fd1538ffe1c79246a5"
+    apiKey: "AIzaSyARmUra3vOnUNODDWYVSjcOP8C3Ne9XzC8",
+    authDomain: "robust-chess-217019.firebaseapp.com",
+    databaseURL: "https://robust-chess-217019.firebaseio.com",
+    projectId: "robust-chess-217019",
+    storageBucket: "robust-chess-217019.appspot.com",
+    messagingSenderId: "839618832766",
+    appId: "1:839618832766:web:5d0496d0103cd264686b2f"
   }
 };
 

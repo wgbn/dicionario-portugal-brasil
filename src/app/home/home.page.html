@@ -1,14 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="home-page">
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
-</ion-content>
+	<div class="search">
+		<ion-searchbar mode="ios" placeholder="buscar termo"></ion-searchbar>
+	</div>
+
+	<main class="main">
+
+        <ion-list>
+            <ion-item detail routerLink="/term/1">
+                <ion-label>Avocado</ion-label>
+            </ion-item>
+        </ion-list>
+
+	</main>
+
+	<div class="footer">
+		<ion-tabs>
+			<!-- Tab bar -->
+			<ion-tab-bar slot="bottom" mode="ios">
+				<ion-tab-button routerLink="/home">
+					<ion-icon name="book"></ion-icon>
+                    <ion-label>Dicionário</ion-label>
+				</ion-tab-button>
+				<ion-tab-button tab="contact">
+					<ion-icon name="wifi"></ion-icon>
+                    <ion-label>Curiosidades</ion-label>
+				</ion-tab-button>
+				<ion-tab-button tab="settings">
+					<ion-icon name="contract"></ion-icon>
+                    <ion-label>Dicas</ion-label>
+				</ion-tab-button>
+			</ion-tab-bar>
+		</ion-tabs>
+	</div>
+</div>
