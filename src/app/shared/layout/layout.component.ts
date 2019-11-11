@@ -21,7 +21,13 @@ export class LayoutComponent implements OnInit {
             this.active = 'curiosity';
         } else if (this.router.url.indexOf('tips') > -1) {
             this.active = 'tips';
+        } else if (this.router.url.indexOf('add') > -1) {
+            this.active = 'add';
         }
+    }
+
+    goTo(to) {
+        this.router.navigate([to]);
     }
 
 }

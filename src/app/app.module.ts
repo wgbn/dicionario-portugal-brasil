@@ -13,6 +13,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    SharedModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule.enablePersistence(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
